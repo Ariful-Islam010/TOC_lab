@@ -11,7 +11,7 @@ int main()
         if(s[i]=='a')
             count++;
     }
-    if(count%2!=0)
+    if(count%2!=0||count==0)
       cout<<"Accepted"<<endl;
     else
         cout<<"Rejected"<<endl;

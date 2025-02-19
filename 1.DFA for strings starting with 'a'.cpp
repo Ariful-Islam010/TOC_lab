@@ -3,11 +3,12 @@ using namespace std;
 int main()
 {
     string s;
-    int i,count=0;
+    int i,count;
     while(1)
     {
         cout<<"Enter the string : ";
         cin>>s;
+        count=0;
         int len=s.length();
         for(int i=0;i<len;i++)
         {

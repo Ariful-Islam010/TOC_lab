@@ -3,15 +3,36 @@ using namespace std;
 int main()
 {
     string s;
+    while(1)
+    {
+    cout<<"Enter the string : ";
     cin>>s;
-    for(int i=0;i<s.length()-1;i++)
+    int i,count=0;
+    for(i=0;i<s.length();i++)
+    {
+        if(s[i]=='a'||s[i]=='b')
+            continue;
+        else
+        {
+           count=1;
+           break;
+        }
+    }
+    int flag=0;
+    for(i=0;i<s.length()-1;i++)
     {
        if(s[i]=='a' && s[i+1]=='b')
        {
-        cout<<"Accepted"<<endl;
-        return 0;
+        flag=1;
+        break;
        }
     }
-    cout<<"Rejected"<<endl;
+    if(count==1)
+        cout<<"We put wrong alphabets"<<endl;
+    else if(flag==1)
+        cout<<"Accepted"<<endl;
+    else
+        cout<<"Rejected"<<endl;
+    }
     return 0;
 }

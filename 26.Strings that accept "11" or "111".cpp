@@ -3,10 +3,29 @@ using namespace std;
 int main()
 {
     string s;
-    cin>>s;
-    if(s=="11"||s=="111" )
-      cout<<"Accepted"<<endl;
+    while(1)
+    {
+    cout<<"Enter the string : ";
+    getline(cin,s);
+    int i,count=0;
+    int len=s.length();
+
+    for(i=0;i<len;i++)
+    {
+        if(s[i]=='0' || s[i]=='1')
+          continue;
+        else
+        {
+           count=1;
+           break;
+        }
+    }
+    if(count==1)
+        cout<<"We put wrong alphabets"<<endl;
+    else if(s=="11" || s=="111")
+        cout<<"Accepted"<<endl;
     else
         cout<<"Rejected"<<endl;
+    }
     return 0;
 }

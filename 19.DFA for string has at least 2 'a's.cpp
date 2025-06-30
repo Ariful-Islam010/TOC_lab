@@ -3,17 +3,31 @@ using namespace std;
 int main()
 {
     string s;
-    cin>>s;
-    int count=0;
+    while(1)
+    {
+    cout<<"Enter the string : ";
+    getline(cin,s);
+    int i,count=0,counta=0;
     int len=s.length();
-    for(int i=0;i<len;i++)
+
+    for(i=0;i<len;i++)
     {
         if(s[i]=='a')
-            count++;
+          counta++;
+        else if(s[i]=='b')
+            continue;
+        else
+        {
+           count=1;
+           break;
+        }
     }
-    if(count>=2)
-      cout<<"Accepted"<<endl;
+    if(count==1)
+        cout<<"We put wrong alphabets"<<endl;
+    else if(counta>=2 && len>=2)
+        cout<<"Accepted"<<endl;
     else
         cout<<"Rejected"<<endl;
+    }
     return 0;
 }
